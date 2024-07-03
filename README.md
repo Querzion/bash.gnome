@@ -4,20 +4,19 @@ It automatically detects your package manager (apt, dnf, or pacman) and installs
 
 ## Usage
 ### Clone the Repository
-
 ```bash
-git clone https://github.com/yourusername/gnome-tools-installer.git
-cd gnome-tools-installer
+git clone https://github.com/querzion/bash.gnome-startup.git
+cd bash.gnome-startup
 ```
 
 ### Make the Script Executable
 ```bash
-chmod +x install_gnome_tools.sh
-Run the Script
+chmod +x bash.gnome-startup.sh
 ```
 
+### Run the Script
 ```bash
-./install_gnome_tools.sh
+./bash.gnome-startup.sh
 ```
 
 ## What the Script Does
