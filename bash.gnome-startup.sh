@@ -89,5 +89,5 @@ git clone https://github.com/codilia/upower-battery.git
 
 # Restart GNOME Shell
 echo "Please restart GNOME Shell by pressing Alt+F2, then type 'r' and press Enter."
-
-echo "Installation of GNOME Tweaks, Extensions, Extension Manager, Visual Studio Code, .NET SDK, and upower-battery extension complete!"
+echo "Open Extension Manager and install 'Forge' for Autotiling features."
+echo "Installation of GNOME Tweaks, Extensions, Extension Manager, Visual Studio Code, .NET SDK, and UPower-Battery extension complete!"
