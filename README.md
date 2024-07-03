@@ -28,6 +28,7 @@ chmod +x bash.gnome-startup.sh
   - GNOME Shell Extension Manager
   - Visual Studio Code
   - Latest .NET SDK
+  - UPower-Battery Extension
 
 ## Compatibility
 ### The script is compatible with:
