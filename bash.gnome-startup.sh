@@ -87,6 +87,38 @@ mkdir -p ~/.local/share/gnome-shell/extensions
 cd ~/.local/share/gnome-shell/extensions
 git clone https://github.com/codilia/upower-battery.git
 
+# Function to install Flatpak if not already installed
+install_flatpak() {
+    if ! command -v flatpak &> /dev/null; then
+        if command -v apt-get &> /dev/null; then
+            sudo apt update
+            sudo apt install flatpak
+        elif command -v dnf &> /dev/null; then
+            sudo dnf install flatpak
+        else
+            echo "Error: Unsupported package manager. Please install Flatpak manually."
+            exit 1
+        fi
+    fi
+}
+
+# Function to install applications via Flatpak
+install_flatpak_apps() {
+    # Ensure Flathub repository is added
+    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+    # Install applications
+    flatpak install flathub -y com.discordapp.Discord com.brave.Browser org.keepassxc.KeePassXC
+
+    # List installed Flatpak apps for verification (optional)
+    echo "Installed Flatpak applications:"
+    flatpak list
+}
+
+# Main script execution
+install_flatpak
+install_flatpak_apps
+
 # Restart GNOME Shell
 echo "Please restart GNOME Shell by pressing Alt+F2, then type 'r' and press Enter."
 echo "Open Extension Manager and install 'Forge' for Autotiling features."
