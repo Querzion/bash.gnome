@@ -22,7 +22,12 @@ chmod +x bash.gnome-startup.sh
 ## What the Script Does
 - Detects the package manager (apt, dnf, or pacman).
 - Updates the package list.
-- Installs GNOME Tweaks, GNOME Shell Extensions, and GNOME Shell Extension Manager.
+### Installs:
+  - GNOME Tweaks
+  - GNOME Shell Extensions
+  - GNOME Shell Extension Manager
+  - Visual Studio Code
+  - Latest .NET SDK
 
 ## Compatibility
 ### The script is compatible with:
