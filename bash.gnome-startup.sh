@@ -92,9 +92,11 @@ install_flatpak() {
     if ! command -v flatpak &> /dev/null; then
         if command -v apt-get &> /dev/null; then
             sudo apt update
-            sudo apt install flatpak
+            sudo apt install -y flatpak
         elif command -v dnf &> /dev/null; then
-            sudo dnf install flatpak
+            sudo dnf install -y flatpak
+        elif command -v pacman &> /dev/null; then
+            sudo pacman -Syu --noconfirm flatpak
         else
             echo "Error: Unsupported package manager. Please install Flatpak manually."
             exit 1
